@@ -1,0 +1,2 @@
+[+] Congratulations! Target Weblogic: 127.0.0.1 username: WebLogic  password: WebLogic
+
