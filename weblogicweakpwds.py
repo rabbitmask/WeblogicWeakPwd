@@ -65,7 +65,6 @@ def run():
         ip=ips[i]
         ip=ip.replace("\n",'')
         p.apply_async(weakPasswd,args=(ip,q,))
-        print(i)
     p.close()
     p.join()
     print('>>>>>任务结束\n')
