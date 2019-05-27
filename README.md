@@ -2,7 +2,7 @@
 Weblogic弱口令批量检测工具
 ```
 weblogicpwd.py      单目标扫描，初始版本
-weblogicweakpwd.py  批量扫描，过度版本
+weblogicweakpwd.py  批量扫描，过渡版本
 weblogicweakpwds.py 批量扫描，多进程版本，最终版本
 
 最终版weblogicweakpwds.py仍有欠缺，在异常处理这块还需完善，
